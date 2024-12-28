@@ -1,0 +1,27 @@
+# Ignorar archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas de configuración de entornos de desarrollo
+.vscode/
+.idea/
+
+# Ignorar archivos de construcción o dependencias
+node_modules/
+build/
+dist/
+
+# Ignorar logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar archivos de sistemas operativos
+*.log
+*.lock
+*.swp
+
+# Ignorar configuraciones de sistemas y bases de datos locales
+*.env
+.env.local
+.env.*.local
