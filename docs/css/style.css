@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -20,25 +23,39 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #ffd700;
 }
 
 main {
+    flex: 1;
     padding: 20px;
     background: #fff;
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
@@ -49,4 +66,64 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilo especial para el formulario */
+form {
+    width: 100%;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    form {
+        padding: 15px;
+    }
 }
