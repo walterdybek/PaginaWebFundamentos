@@ -20,7 +20,7 @@
         </nav>
     </header>
     <main>
-        <form>
+        <form onsubmit="showMessage(event)">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name">
 
@@ -36,5 +36,11 @@
     <footer>
         <p>&copy; 2024 Walter Dybek</p>
     </footer>
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); // Evita el envío real del formulario
+            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+        }
+    </script>
 </body>
 </html>
