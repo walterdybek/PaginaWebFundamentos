@@ -20,30 +20,7 @@ header h1 {
     margin: 0;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    color: #ffd700;
-}
 
 main {
     flex: 1;
@@ -61,12 +38,133 @@ main {
 footer {
     text-align: center;
     padding: 10px 20px;
-    background: #333;
+    background: #003366;
     color: #fff;
     position: relative;
     bottom: 0;
     width: 100%;
 }
+
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #00509e;
+}
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+/* Header */
+header {
+    background: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #00509e;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #00264d;
+
+}
+
+
+
+/* Degree Section */
+.course-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: #e0f7fa;
+    border: 1px solid #b2ebf2;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.course-section:hover {
+    background: #b2ebf2;
+}
+
+.course-title {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #00509e;
+    margin: 0;
+}
+
+.course-title:hover {
+    color: #00264d;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
 
 /* Estilo especial para el formulario */
 form {
@@ -114,35 +212,4 @@ form button:hover {
 
 .hidden {
     display: none;
-}
-
-.course-section {
-    margin-top: 20px;
-}
-
-.course-title {
-    cursor: pointer;
-    font-weight: bold;
-    color: #007BFF;
-    text-decoration: underline;
-}
-
-.course-title:hover {
-    color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main {
-        width: 100%;
-        margin: 10px auto;
-    }
-
-    form {
-        padding: 15px;
-    }
 }

@@ -22,10 +22,22 @@
         </nav>
     </header>
     <main>
-        <p>Este sitio documenta lo aprendido durante la materia y destaca logros importantes.</p>
+        <section>
+            <h2>Inicio</h2>
+            <p>Bienvenido a mi página web personal donde comparto mis aprendizajes y logros en la ingeniería informática.</p>
+            <button class="btn-primary" onclick="showModal()">Descubre Más</button>
+        </section>
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Información Adicional</h3>
+                <p>Explora las diferentes secciones de esta página para conocer más sobre mí.</p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Walter Dybek</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
