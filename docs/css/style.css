@@ -112,6 +112,25 @@ form button:hover {
     background: #555;
 }
 
+.hidden {
+    display: none;
+}
+
+.course-section {
+    margin-top: 20px;
+}
+
+.course-title {
+    cursor: pointer;
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.course-title:hover {
+    color: #0056b3;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;

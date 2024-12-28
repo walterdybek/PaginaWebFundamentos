@@ -24,16 +24,76 @@
     <main>
         <section>
             <h2>Descripción del Grado</h2>
-            <p>Información general sobre el grado académico.</p>
-            <ul>
-                <li>Materia 1</li>
-                <li>Materia 2</li>
-                <li><a href="fii.html">Fundamentos de la Ingeniería Informática</a></li>
-            </ul>
+            <p>Haz clic en cada curso para ver sus asignaturas:</p>
+            <div class="course-section">
+                <p class="course-title" onclick="toggleSection('year1')">Primer Año</p>
+                <ul id="year1" class="hidden">
+                    <li>Matemática Discreta - 6 ECTS</li>
+                    <li>Matemáticas para la Ingeniería I - 6 ECTS</li>
+                    <li>Matemáticas para la Ingeniería II - 6 ECTS</li>
+                    <li>Fundamentos de Ingeniería Informática - 6 ECTS</li>
+                    <li>Introducción a la Programación - 6 ECTS</li>
+                    <li>Lógica y Pensamiento Crítico - 6 ECTS</li>
+                    <li>Gestión del Conocimiento y Habilidades de la Persona - 6 ECTS</li>
+                    <li>Electrónica y Tecnología de Computadores - 6 ECTS</li>
+                    <li>Historia de la Ciencia y la Tecnología - 3 ECTS</li>
+                </ul>
+            </div>
+            <div class="course-section">
+                <p class="course-title" onclick="toggleSection('year2')">Segundo Año</p>
+                <ul id="year2" class="hidden">
+                    <li>Estructura de Datos y Algoritmos - 6 ECTS</li>
+                    <li>Arquitectura y Organización de Computadores - 6 ECTS</li>
+                    <li>Análisis y Diseño de Sistemas de Información - 6 ECTS</li>
+                    <li>Desarrollo Web - 6 ECTS</li>
+                    <li>Proyectos I - 6 ECTS</li>
+                    <li>Antropología y Responsabilidad Social - 6 ECTS</li>
+                    <li>Bases de Datos - 6 ECTS</li>
+                    <li>Sistemas Operativos - 6 ECTS</li>
+                    <li>Ingeniería del Software I - 6 ECTS</li>
+                </ul>
+            </div>
+            <div class="course-section">
+                <p class="course-title" onclick="toggleSection('year3')">Tercer Año</p>
+                <ul id="year3" class="hidden">
+                    <li>Inteligencia Artificial - 6 ECTS</li>
+                    <li>Ingeniería del Software II - 6 ECTS</li>
+                    <li>Desarrollo Interactivo de Software - 6 ECTS</li>
+                    <li>Interacción Persona Computador - 6 ECTS</li>
+                    <li>Complejidad Computacional - 6 ECTS</li>
+                    <li>Ética y Deontología Profesional - 6 ECTS</li>
+                    <li>Administración de Sistemas - 6 ECTS</li>
+                    <li>Bases de Datos Avanzadas - 6 ECTS</li>
+                    <li>Redes y Sistemas Distribuidos - 6 ECTS</li>
+                    <li>Proyectos II - 6 ECTS</li>
+                </ul>
+            </div>
+            <div class="course-section">
+                <p class="course-title" onclick="toggleSection('year4')">Cuarto Año</p>
+                <ul id="year4" class="hidden">
+                    <li>Gestión de Proyectos Informáticos - 6 ECTS</li>
+                    <li>Computación en la Nube - 6 ECTS</li>
+                    <li>Trabajo Fin de Grado - 12 ECTS</li>
+                    <li>Optativas (mínimo 24 ECTS)</li>
+                    <li>Prácticas en Empresa - 6 ECTS</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Walter Dybek</p>
     </footer>
+    <script>
+        function toggleSection(sectionId) {
+            const courseSections = document.querySelectorAll('.course-section ul');
+            courseSections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.toggle('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
