@@ -36,3 +36,36 @@ document.querySelectorAll('.fii-modal-close').forEach(button => {
         button.closest('.fii-modal').style.display = 'none';
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+        "../images/photo1.jpg",
+        "../images/photo2.jpg",
+        "../images/photo3.jpg", // Puedes añadir más imágenes si lo deseas
+    ];
+
+    let currentIndex = 0;
+
+    const galleryContainer = document.getElementById("gallery-container");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    function updateGallery() {
+        galleryContainer.innerHTML = `
+            <img class="gallery-image" src="${images[currentIndex]}" alt="Foto ${currentIndex + 1}">
+        `;
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateGallery();
+    });
+
+    // Inicializa la galería con la primera imagen
+    updateGallery();
+});

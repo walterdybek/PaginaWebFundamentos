@@ -349,14 +349,54 @@ form button:hover {
 /* Galería */
 .about-gallery {
     text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f0f9ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.gallery-images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .gallery-image {
-    max-width: 100%;
+    max-width: 45%;
     height: auto;
-    margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Botones para cambiar de imagen */
+.gallery-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-btn {
+    background-color: #00509e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.gallery-btn:hover {
+    background-color: #003366;
+    transform: scale(1.1);
 }
 
 /*iconos de redes*/
