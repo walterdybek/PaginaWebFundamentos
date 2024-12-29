@@ -460,3 +460,60 @@ form button:hover {
     transform: scale(1.05); /* Pequeño aumento de tamaño */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
 }
+
+
+
+/* net.html */
+
+/* Contenedor de tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f9ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las tarjetas */
+.card {
+    background-color: white;
+    border: 1px solid #b2e2f2;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón para los enlaces */
+.btn-link {
+    display: inline-block;
+    background-color: #00509e;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-link:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+
