@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Mí</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="snake">
+    <header>
+        <h1>Snake Game</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de Mí</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="net.html">Red</a></li>
+                <li><a href="topic.html">Temática</a></li>
+                <li><a href="degree.html">Grado</a></li>
+                <li><a href="fii.html">FII</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="snake-container">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="snake-controls">
+                <button class="snake-button"   id="startButton">Start Game</button>
+                <p class="score">Score: <span id="score">0</span></p>
+            </div>
+        </div>
+        <section>
+            <h2>Instrucciones</h2>
+            <button class="btn-primary" onclick="showModal()">Descubre Más</button>
+        </section>
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Funcionamiento</h3>
+                <p>al hacer click en start debes usar las una d elas 4 teclas para desplazarte,que son las siguientes , w,a,s,d respectivamente para cada dirreción.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Walter Dybek</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
