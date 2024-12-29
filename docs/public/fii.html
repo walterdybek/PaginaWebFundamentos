@@ -21,17 +21,17 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
+    <main class="fii-main">
+        <section class="fii-section">
             <h2>Descripción de la Asignatura</h2>
             <p>
                 La asignatura Fundamentos de Ingeniería Informática proporciona una visión global de la ingeniería informática,
-                tanto como disciplina académica como profesión. Permite al estudiante conocer los fundamentos matemáticos,
-                físicos, antropológicos y éticos de esta ingeniería, así como las salidas profesionales y el papel del ingeniero informático
-                en la sociedad.
+                tanto como disciplina académica como profesión.
             </p>
+            <button class="fii-modal-trigger" data-modal="modal-descripcion">Leer más</button>
         </section>
-        <section>
+        
+        <section class="fii-section">
             <h2>Contenidos</h2>
             <ul>
                 <li><strong>Ingeniería Informática en la Sociedad:</strong> Pasado, presente y futuro; fundamentos antropológicos y éticos.</li>
@@ -39,7 +39,7 @@
                 <li><strong>Procesamiento y Gestión:</strong> Paradigmas actuales, computación en la nube, blockchain, IoT, y más.</li>
             </ul>
         </section>
-        <section>
+        <section class="fii-section">
             <h2>Objetivos de Aprendizaje</h2>
             <ul>
                 <li>Entender el propósito de la ingeniería informática y su contribución a la sociedad.</li>
@@ -47,14 +47,14 @@
                 <li>Desarrollar habilidades prácticas en desarrollo web mediante proyectos colaborativos.</li>
             </ul>
         </section>
-        <section>
+        <section class="fii-section">
             <h2>Metodología</h2>
             <p>
                 La asignatura combina actividades presenciales como clases teóricas, prácticas en laboratorio y talleres,
                 junto con trabajo autónomo individual y en grupo. También incluye un proyecto práctico de desarrollo web.
             </p>
         </section>
-        <section>
+        <section class="fii-section">
             <h2>Evaluación</h2>
             <ul>
                 <li><strong>Exámenes teórico-prácticos:</strong> 50% de la nota final.</li>
@@ -66,5 +66,19 @@
     <footer>
         <p>&copy; 2024 Walter Dybek</p>
     </footer>
+    <!--modal-->
+    <div id="modal-descripcion" class="fii-modal">
+        <div class="fii-modal-content">
+            <h2>Descripción Ampliada</h2>
+            <p>
+                La asignatura Fundamentos de Ingeniería Informática proporciona una visión global de la ingeniería informática,
+                tanto como disciplina académica como profesión. Permite al estudiante conocer los fundamentos matemáticos, físicos,
+                antropológicos y éticos de esta ingeniería, así como las salidas profesionales y el papel del ingeniero informático
+                en la sociedad.
+            </p>
+            <button class="fii-modal-close">Cerrar</button>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>

@@ -22,3 +22,17 @@ function showMessage(event) {
     event.preventDefault();
     alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
 }
+
+document.querySelectorAll('.fii-modal-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = e.target.dataset.modal;
+        document.getElementById(modalId).style.display = 'flex';
+    });
+});
+
+document.querySelectorAll('.fii-modal-close').forEach(button => {
+    button.addEventListener('click', () => {
+        button.closest('.fii-modal').style.display = 'none';
+    });
+});
