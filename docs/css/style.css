@@ -154,6 +154,10 @@ nav ul li a:hover {
     padding: 20px;
     
 }
+    .course-container ul li{
+        color: #003366;
+    }
+
 .course-section {
     flex: 1 1 30%;
     min-width: 200px;
@@ -237,7 +241,7 @@ nav ul li a:hover {
 }
 
 .degree-summary ul li strong {
-    color: #00264d;
+    color: #003366;
 }
 
 
@@ -438,6 +442,11 @@ form button:hover {
     margin: 0 auto;
 }
 
+.fii-main h2,strong {
+    color: #003366;
+
+}
+
 .fii-section {
     margin-bottom: 30px;
     padding: 20px;
@@ -557,3 +566,94 @@ form button:hover {
     transform: scale(1.05);
 }
 
+/*topic*/
+/* General para topic */
+.topic-main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topic-section,
+.topic-gallery,
+.topic-video,
+.topic-details {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f0f9ff;
+    border: 1px solid #b2e2f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Galería */
+.gallery-images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.gallery-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-btn {
+    background-color: #00509e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.gallery-btn:hover {
+    background-color: #003366;
+    transform: scale(1.1);
+}
+
+/* Video */
+.video-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.topic-encounters {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f0f9ff;
+    border: 1px solid #b2e2f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.topic-main h2{
+    color: #003366;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.topic-main strong
+{
+    color: #003366;
+}
+ .fii-modal-content h2,strong{
+    color: #003366;
+}

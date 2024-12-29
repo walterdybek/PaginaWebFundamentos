@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temática</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/2f83fb7104.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -21,14 +22,71 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
+    <main class="topic-main">
+        <section class="topic-section">
             <h2>Tema</h2>
-            <p>Descripción detallada sobre el tema elegido.</p>
+            <p>Descripción detallada sobre el tema elegido: <strong>Diablo Immortal</strong>. Exploramos sus clases, características y un análisis del videojuego.</p>
+        </section>
+        <section class="topic-gallery">
+            <h2>Galería de Imágenes</h2>
+            <div class="gallery-images-container" id="topic-gallery-container">
+                <img class="gallery-image" src="../images/diablo1.jpg" alt="Diablo Immortal 1">
+                <img class="gallery-image" src="../images/diablo2.jpg" alt="Diablo Immortal 2">
+                <img class="gallery-image" src="../images/diablo3.jpg" alt="Diablo Immortal 3">
+                <img class="gallery-image" src="../images/diablo4.jpg" alt="Diablo Immortal 4">
+            </div>
+            <div class="gallery-controls">
+                <button class="gallery-btn" id="topic-prevBtn">Anterior</button>
+                <button class="gallery-btn" id="topic-nextBtn">Siguiente</button>
+            </div>
+        </section>
+        <section class="topic-video">
+            <h2>Video sobre Diablo Immortal</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fkBXzKkss9Q" title="Diablo Immortal Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="topic-details">
+            <h2>Clases de Diablo Immortal</h2>
+            <p>En <strong>Diablo Immortal</strong>, puedes elegir entre varias clases de personajes, cada una con habilidades únicas:</p>
+            <ul>
+                <li><strong>Bárbaro:</strong> Especializado en combate cuerpo a cuerpo y daño masivo.</li>
+                <li><strong>Monje:</strong> Maestro de habilidades cuerpo a cuerpo y espirituales.</li>
+                <li><strong>Cazador de demonios:</strong> Experto en combate a distancia con arcos y ballestas.</li>
+                <li><strong>Mago:</strong> Usuario de magia poderosa con ataques a distancia.</li>
+                <li><strong>Necromante:</strong> Controla hordas de muertos vivientes y magia oscura.</li>
+                <li><strong>Cruzado:</strong> Caballero con armadura pesada y habilidades defensivas.</li>
+            </ul>
+        </section>
+        <section class="topic-encounters">
+            <h2>Encuentros y Jefes</h2>
+            <p>Explora los emocionantes encuentros y desafíos que ofrece Diablo Immortal.</p>
+            <button class="fii-modal-trigger" data-modal="modal-encounters">Leer más</button>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Walter Dybek</p>
     </footer>
+    <div id="modal-encounters" class="fii-modal">
+        <div class="fii-modal-content">
+            <h2>Encuentros y Jefes en Diablo Immortal</h2>
+            <p>
+                Los jugadores se enfrentarán a una variedad de encuentros épicos en Diablo Immortal, desde hordas de demonios hasta
+                formidables jefes que pondrán a prueba sus habilidades. Entre ellos se incluyen:
+            </p>
+            <ul>
+                <li><strong>Skarn:</strong> El Heraldo del Terror, un formidable enemigo con habilidades devastadoras.</li>
+                <li><strong>Lassal el Flameante:</strong> Una poderosa entidad demoníaca que domina el fuego.</li>
+                <li><strong>Fahirc:</strong> Un jefe estratégico que requiere coordinación y planificación para derrotarlo.</li>
+                <li><strong>Segadores de Almas:</strong> Criaturas demoníacas que atacan en grandes grupos.</li>
+            </ul>
+            <p>
+                Cada encuentro es único y está diseñado para desafiar a los jugadores, incentivando la cooperación en equipo y el uso de
+                habilidades estratégicas.
+            </p>
+            <button class="fii-modal-close">Cerrar</button>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>

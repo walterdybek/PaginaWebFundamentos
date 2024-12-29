@@ -69,3 +69,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializa la galería con la primera imagen
     updateGallery();
 });
+
+
+//script para topic 
+document.addEventListener("DOMContentLoaded", () => {
+    const imagesTopic = [
+        "../images/diablo1.jpg",
+        "../images/diablo2.jpg",
+        "../images/diablo3.jpg",
+        "../images/diablo4.jpg", // Añade más imágenes aquí
+    ];
+
+    let currentIndexTopic = 0;
+
+    const topicGalleryContainer = document.getElementById("topic-gallery-container");
+    const topicPrevBtn = document.getElementById("topic-prevBtn");
+    const topicNextBtn = document.getElementById("topic-nextBtn");
+
+    function updateTopicGallery() {
+        topicGalleryContainer.innerHTML = `
+            <img class="gallery-image" src="${imagesTopic[currentIndexTopic]}" alt="Imagen ${currentIndexTopic + 1}">
+        `;
+    }
+
+    topicPrevBtn.addEventListener("click", () => {
+        currentIndexTopic = (currentIndexTopic - 1 + imagesTopic.length) % imagesTopic.length;
+        updateTopicGallery();
+    });
+
+    topicNextBtn.addEventListener("click", () => {
+        currentIndexTopic = (currentIndexTopic + 1) % imagesTopic.length;
+        updateTopicGallery();
+    });
+
+    updateTopicGallery();
+});
+
