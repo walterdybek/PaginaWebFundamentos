@@ -8,14 +8,32 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+/* Header */
+
 
 header {
-    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+header {
+    background: #003366;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
 }
-
 header h1 {
     margin: 0;
 }
@@ -23,12 +41,12 @@ header h1 {
 
 
 main {
-    flex: 1;
+    flex: 1 0 auto;
     padding: 20px;
     background: #fff;
     margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
+    width: 60%;
+    max-width: 90%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -99,31 +117,36 @@ footer {
 .btn-primary:hover {
     background-color: #00509e;
 }
-/* General */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-}
 
-/* Header */
-header {
-    background: #003366;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
+
 
 /* Navigation */
+/* General Navbar Styling */
+
+nav {
+    background: #00509e;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
+    margin: 0 auto;
+    width: 80%; /* Cambia el ancho, puedes usar % o px */
+    height: 60px; /* Cambia el alto, ajusta según tus necesidades */
+    max-width: 1200px; /* Limita el ancho máximo */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho/alto */
+}
+
+/* Links del Navbar */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    background: #00509e;
-    border-radius: 5px;
+    gap: 15px;
+    
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
 }
 
 nav ul li a {
@@ -131,17 +154,85 @@ nav ul li a {
     padding: 10px 15px;
     text-decoration: none;
     display: inline-block;
+    border-radius: 5px;
     transition: all 0.3s ease;
-    border-radius: 5px; /* Hace las cajas redondeadas */
-    transition: all 0.3s ease; /* Transición suave */
 }
 
 nav ul li a:hover {
     background: #00264d;
     color: #00509e;
-    border-radius: 10px; /* Opción: aumenta el radio en hover */
-    text-decoration: none; /* Asegura que no haya subrayado */
 }
+
+/* Menú hamburguesa para pantallas pequeñas */
+.menu-icon {
+    display: none;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 20px;
+}
+
+/* Animación cuando el menú está abierto */
+.menu-icon.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Responsive Design para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta el menú inicialmente */
+        flex-direction: column;
+        gap: 10px;
+        background: #00509e;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .menu-icon {
+        display: block; /* Muestra el ícono del menú en pantallas pequeñas */
+    }
+}
+
+
 
 /* Degree Section */
 .color{
@@ -152,7 +243,7 @@ nav ul li a:hover {
     display: flex; /* Activar Flexbox */
     flex-direction: column; /* Alinear verticalmente */
     justify-content: center; /* Centrar horizontalmente */
-    align-items: stretch; /* Alinear verticalmente de manera uniforme */
+    align-items: center; /* Alinear verticalmente de manera uniforme */
     gap: 20px; /* Espaciado entre las cajas */
     padding: 20px;
     
@@ -164,7 +255,7 @@ nav ul li a:hover {
 
 .course-section {
     flex: 1 1 30%;
-    min-width: 200px;
+    min-width: 300px;
     max-width: 300px;
     margin: 10px;
     padding: 15px;

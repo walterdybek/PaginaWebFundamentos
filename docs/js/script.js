@@ -218,3 +218,11 @@ function resetGame() {
     scoreDisplay.textContent = score;
     gameInterval = null;
 }
+
+
+function toggleMenu() {
+    const navLinks = document.querySelector("nav ul");
+    const menuIcon = document.querySelector(".menu-icon");
+    navLinks.classList.toggle("show");
+    menuIcon.classList.toggle("open"); // Clase para animación del ícono
+}
